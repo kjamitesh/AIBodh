@@ -37,10 +37,11 @@
           a.target = '_blank';
           a.className = 'tool-card';
           a.innerHTML = `
-            <img src="\${tool.Logo}" alt="\${tool.Name}">
-            <span>\${tool.Name}</span>
-            <p class="desc">\${tool.Description}</p>
-          `;
+          <img src="${tool.Logo}" alt="${tool.Name}">
+          <span>${tool.Name}</span>
+          <p class="desc">${tool.Description}</p>
+        `;
+
           grid.appendChild(a);
         });
       }
