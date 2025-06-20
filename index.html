@@ -26,23 +26,22 @@
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <script>
     Papa.parse('ai_tools.csv', {
-      download: true,
-      header: true,
-      complete: function(results) {
-        const grid = document.getElementById('toolsGrid');
-        results.data.forEach(tool => {
-          if (!tool.Name || !tool.Website) return;
-          const a = document.createElement('a');
-          a.href = tool.Website;
-          a.target = '_blank';
-          a.className = 'tool-card';
-          a.innerHTML = `
+    download: true,
+    header: true,
+    complete: function(results) {
+      const grid = document.getElementById('toolsGrid');
+      results.data.forEach(tool => {
+        if (!tool.Name || !tool.Website) return;
+        const a = document.createElement('a');
+        a.href = tool.Website;
+        a.target = '_blank';
+        a.className = 'tool-card';
+        a.innerHTML = `
           <img src="${tool.Logo}" alt="${tool.Name}">
           <span>${tool.Name}</span>
           <p class="desc">${tool.Description}</p>
         `;
-
-          grid.appendChild(a);
+        grid.appendChild(a);
         });
       }
     });
