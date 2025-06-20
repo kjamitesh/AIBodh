@@ -40,7 +40,7 @@ header input {
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
 }
 .tool-card {
@@ -76,8 +76,16 @@ body.dark .tool-card {
   color: #555;
   margin-top: 0.3rem;
 }
+.tool-card .category {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 0.2rem;
+}
 body.dark .desc {
   color: #aaa;
+}
+body.dark .category {
+  color: #bbb;
 }
 footer {
   text-align: center;
